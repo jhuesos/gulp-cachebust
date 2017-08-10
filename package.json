@@ -4,7 +4,23 @@
   "version": "0.0.6",
   "license": "MIT",
   "author": "Josiah <josiah@web-dev.com.au>",
-  "repository": "git@github.com:Josiah/gulp-cachebust.git",
+  "contributors": [
+    {
+      "name": "Jaime Vega",
+      "email": "jhuesos@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jhuesos/gulp-cachebust.git"
+  },
+  "homepage": "https://www.npmjs.com/package/gulp-cachebust",
+  "bugs": {
+    "url": "https://github.com/jhuesos/gulp-cachebust/issues"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },

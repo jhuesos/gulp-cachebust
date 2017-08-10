@@ -4,6 +4,10 @@
 
 Useful for cachebusting
 
+**This is the new repository for gulp-cachebust plugin**. The plugin was originaly created by Josiah Truasheim and it
+has been transfered to this new repository ([link](https://github.com/Josiah/gulp-cachebust) to the previous one). 
+Development will continue in this repository. 
+
 ## Install
 
 Install with [npm](https://npmjs.org/package/gulp-cachebust)
