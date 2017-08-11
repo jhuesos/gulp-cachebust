@@ -2,6 +2,11 @@
 
 > Generates checksums and renames references to files
 
+
+![Travis build status](https://travis-ci.org/jhuesos/gulp-cachebust.svg?branch=master)
+![Dependency status](https://david-dm.org/jhuesos/gulp-cachebust.svg)
+![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)
+
 Useful for cachebusting
 
 *This plugin is only compatible with files that contain a stream, it only works in buffer mode.*
