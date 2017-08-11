@@ -17,10 +17,10 @@ function CacheBuster(options) {
     if (this.random) {
         var shasum = crypto.createHash('sha1');
         shasum.update(crypto.randomBytes(50).toString());
-        this.hash =  shasum.digest('hex').substr(0, this.checksumLength);
+        this.hash = shasum.digest('hex').substr(0, this.checksumLength);
     }
 
-    this.pathFormatter = options && options.pathFormatter ? options.pathFormatter : function(dirname, basename, extname, checksum) {
+    this.pathFormatter = options && options.pathFormatter ? options.pathFormatter : function (dirname, basename, extname, checksum) {
         return path.join(dirname, basename + '.' + checksum + extname);
     };
 
@@ -31,12 +31,17 @@ CacheBuster.prototype.getChecksum = function getChecksum(file) {
     var hash = crypto.createHash('md5');
 
     if (file.isNull()) {
-        return; 
+        return;
     }
 
     if (file.isStream()) {
-        file.pipe(hash);
-        hash.end();
+        this.emit(
+            'error',
+            new PluginError('gulp-cachebust', 'Non buffer files are not supported file hash content calculation')
+        );
+
+        this.push(file);
+        return callback();
     }
 
     if (file.isBuffer()) {
@@ -66,7 +71,7 @@ CacheBuster.prototype.getRelativeMappings = function getRelativeMappings() {
     for (var original in this.mappings) {
         var cachebusted = this.mappings[original];
 
-        mappings.push({original: original, cachebusted: cachebusted});
+        mappings.push({ original: original, cachebusted: cachebusted });
     }
 
     return mappings;
@@ -111,7 +116,7 @@ CacheBuster.prototype.references = function references() {
         var contents = file.contents.toString(encoding);
 
         var mappings = cachebuster.getRelativeMappings(file.path);
-        for (var i=0; i < mappings.length; i++) {
+        for (var i = 0; i < mappings.length; i++) {
             var original = mappings[i].original;
             var cachebusted = mappings[i].cachebusted;
 

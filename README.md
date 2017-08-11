@@ -4,6 +4,8 @@
 
 Useful for cachebusting
 
+*This plugin is only compatible with files that contain a stream, it only works in buffer mode.*
+
 **This is the new repository for gulp-cachebust plugin**. The plugin was originaly created by Josiah Truasheim and it
 has been transfered to this new repository ([link](https://github.com/Josiah/gulp-cachebust) to the previous one). 
 Development will continue in this repository. 
@@ -15,7 +17,6 @@ Install with [npm](https://npmjs.org/package/gulp-cachebust)
 ```
 npm install --save-dev gulp-cachebust
 ```
-
 
 ## Example
 

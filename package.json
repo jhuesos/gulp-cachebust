@@ -19,10 +19,10 @@
     "url": "https://github.com/jhuesos/gulp-cachebust/issues"
   },
   "engines": {
-    "node": ">=6.0"
+    "node": ">=4.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "dependencies": {
     "through2": "^0.5.1",
@@ -30,9 +30,9 @@
     "slash": "1.0.0"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "lodash": "^3.10.1",
-    "mocha": "^2.3.4",
+    "chai": "^4.1.1",
+    "lodash": "^4.0.0",
+    "mocha": "^3.5.0",
     "vinyl": "^1.1.0"
   }
 }
