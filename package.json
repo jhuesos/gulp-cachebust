@@ -1,7 +1,7 @@
 {
   "name": "gulp-cachebust",
   "description": "Generates checksums and renames references to files, useful for cachebusting",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "author": "Josiah <josiah@web-dev.com.au>",
   "contributors": [
