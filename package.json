@@ -1,12 +1,28 @@
 {
   "name": "gulp-cachebust",
   "description": "Generates checksums and renames references to files, useful for cachebusting",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "license": "MIT",
   "author": "Josiah <josiah@web-dev.com.au>",
-  "repository": "git@github.com:Josiah/gulp-cachebust.git",
+  "contributors": [
+    {
+      "name": "Jaime Vega",
+      "email": "jhuesos@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jhuesos/gulp-cachebust.git"
+  },
+  "homepage": "https://www.npmjs.com/package/gulp-cachebust",
+  "bugs": {
+    "url": "https://github.com/jhuesos/gulp-cachebust/issues"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "dependencies": {
     "through2": "^0.5.1",
@@ -14,9 +30,9 @@
     "slash": "1.0.0"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "lodash": "^3.10.1",
-    "mocha": "^2.3.4",
+    "chai": "^4.1.1",
+    "lodash": "^4.0.0",
+    "mocha": "^3.5.0",
     "vinyl": "^1.1.0"
   }
 }

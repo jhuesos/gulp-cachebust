@@ -1,4 +1,3 @@
-/*jshint mocha:true, expr: true */
 var CacheBuster = require('../index');
 var File = require('vinyl');
 var expect = require('chai').expect;
