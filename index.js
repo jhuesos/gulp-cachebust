@@ -129,7 +129,7 @@ CacheBuster.prototype.references = function references(basePath) {
             var original = mappings[i].original;
             var cachebusted = mappings[i].cachebusted;
 
-            contents = contents.replace(new RegExp('(["\'])' + original + '(?!\\.)\\b', 'g'), "$1" + cachebusted);
+            contents = contents.replace(new RegExp('(["\'](?:\\./){0,1})' + original + '(?!\\.)\\b', 'g'), "$1" + cachebusted);
         }
 
         file.contents = new Buffer(contents, encoding);
