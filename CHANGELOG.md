@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.0.9] - 2017-10-28
+### Changed
+- Escape Regex special chars from original path. Fixes #3 (thanks @jaysalvat)
+
 ## [0.0.8] - 2017-08-11
 ### Changed
 - This plugin does not work with files containing a stream (`gulp.src(..., {buffer: false});`). So the plugin has been
