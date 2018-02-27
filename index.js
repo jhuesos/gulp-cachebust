@@ -1,9 +1,8 @@
 var crypto = require('crypto');
 var through2 = require('through2');
-var gutil = require('gulp-util');
 var path = require('path');
 var slash = require('slash');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
 
 module.exports = CacheBuster;
 
@@ -119,7 +118,7 @@ CacheBuster.prototype.references = function references() {
         for (var i = 0; i < mappings.length; i++) {
             var original = mappings[i].original;
             var cachebusted = mappings[i].cachebusted;
-            
+
             original = original.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 
             contents = contents.replace(new RegExp('\\b' + original + '(?!\\.)\\b', 'g'), cachebusted);
