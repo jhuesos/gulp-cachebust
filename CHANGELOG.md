@@ -27,3 +27,11 @@ changed so when passed file with streams it throws and error.
 - Moved to a new Github repository.
 - Missing metadata in the `package.json` has been added.
 
+## [0.0.11] - 2019-09-16
+### Fixed
+- Path to substitute are now sorted by from longest to shortest. (Fixes #10). 
+Thanks [@EdTorbett](https://github.com/EdTorbett) for your help!.
+
+### Changed
+- Updated `Mocha` to its latest version as it contained critical security 
+vulnerability.
