@@ -19,7 +19,7 @@
     "url": "https://github.com/jhuesos/gulp-cachebust/issues"
   },
   "engines": {
-    "node": ">=4.0"
+    "node": ">=8.0"
   },
   "scripts": {
     "test": "mocha"
