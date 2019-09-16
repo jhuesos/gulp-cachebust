@@ -73,6 +73,14 @@ CacheBuster.prototype.getRelativeMappings = function getRelativeMappings() {
         mappings.push({ original: original, cachebusted: cachebusted });
     }
 
+    //Handle cases where one path is a subsequence of another by always replacing the longest subsequences first.
+    //Otherwise, given the mappings a/b/c.jpg -> /a/b/c.00000001.jpg and /b/c.jpg -> /b/c.00000002.jpg, an unsorted
+    //mapping may produce the output /a/b/c.00000002.jpg.
+
+    mappings.sort((a, b) => {
+        return b.original.length - a.original.length;
+    });
+
     return mappings;
 };
 
