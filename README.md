@@ -1,6 +1,8 @@
 # [gulp](https://github.com/wearefractal/gulp)-cachebust
 
-> Generates checksums and renames references to files
+**IMPORTANT! This project is not being actively maintained. So use it at your own risk. I am open to collaboration. So feel free to open your pull requests with fixes and improvements.**
+
+Generates checksums and renames references to files
 
 
 ![Travis build status](https://travis-ci.org/jhuesos/gulp-cachebust.svg?branch=master)
